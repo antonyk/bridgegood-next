@@ -4,9 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
+test/node_modules
 
 # testing
 /coverage
+.nyc_output
 
 # next.js
 /.next/
@@ -32,3 +34,20 @@ yarn-error.log*
 
 # vercel
 .vercel
+.now
+
+# build output
+dist
+.next
+
+# logs & pids
+*.log
+pids
+
+# test output
+test/**/out*
+test/**/next-env.d.ts
+.DS_Store
+/e2e-tests
+
+# pr-stats.md # maybe
