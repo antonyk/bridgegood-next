@@ -51,3 +51,6 @@ test/**/next-env.d.ts
 /e2e-tests
 
 # pr-stats.md # maybe
+
+# remove package-lock.json due to yarn conflict on Vercel
+package-lock.json
