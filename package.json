@@ -21,11 +21,13 @@
     "babel-plugin-import": "^1.13.0",
     "faunadb": "2.6.1",
     "less": "^3.12.2",
+    "moment": "^2.29.1",
     "next": "10.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "sass": "^1.26.3",
     "styled-components": "5.1.0",
+    "swr": "^0.3.7",
     "typescript": "3.8.3"
   },
   "devDependencies": {

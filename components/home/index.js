@@ -8,7 +8,7 @@ import WhiteSpace from './WhiteSpace'
 // import { Link } from 'react-router-dom'
 import './index.less'
 
-const HomePage = () => {
+export default function Page() {
   return (
     <main
       style={{
@@ -26,7 +26,7 @@ const HomePage = () => {
           </h1>
           <div>
             <button>
-              <a href="/reservation" data-test="reservation-link">
+              <a href="/reserve" data-test="reservation-link">
                 Reserve a spot now
                 <span>
                   <Image
@@ -195,9 +195,7 @@ const HomePage = () => {
       </section>
 
       <WhiteSpace />
-      
+
     </main>
   )
 }
-
-export default HomePage

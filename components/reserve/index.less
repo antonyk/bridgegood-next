@@ -1,0 +1,465 @@
+/* ===== MakeResContainer.js ===== */
+.big-box {
+  margin: 3rem 5rem 2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid #7e7a7a;
+}
+
+.col-1 h2,
+.col-2 h2,
+.col-3 h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.h2-grey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+  color: #e5e5e5;
+}
+
+.components {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.steps-box {
+  width: 100%;
+  background: rgba(196, 196, 196, 0.25);
+  padding: 1rem 0 0.5rem;
+}
+
+.steps {
+  width: 30rem;
+  margin: 0 auto;
+}
+
+/* ===== RenderRoomPick.js ===== */
+.room-box {
+  border: 1px#4E4E4E solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 17rem;
+  padding: 5rem 0 6rem;
+}
+
+.room-btn {
+  border: 1px #4e4e4e solid;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.room-btn:hover {
+  color: #1a64b7;
+  border: 1px #1a64b7 solid;
+}
+
+.room-btn-active {
+  color: #ffffff;
+  border: 1px #4e4e4e solid;
+  background-color: #002171;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.room-box-disabled {
+  border: 1px#E5E5E5 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 17rem;
+  padding: 5rem 0 6rem;
+}
+
+.room-btn-disabled {
+  border: 1px #e5e5e5 solid;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  width: 10rem;
+  color: #e5e5e5;
+  cursor: default;
+}
+
+/* ===== RenderTimeSlots.js ===== */
+.timeSlotBox {
+  border: 1px #4e4e4e solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem 2.35rem;
+}
+
+.row-ts {
+  display: flex;
+}
+
+.col-ts {
+  display: flex;
+  flex-direction: column;
+}
+
+.tsBtn {
+  margin: 0.5rem 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px #4e4e4e solid;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.tsBtn:hover {
+  color: #40a9ff;
+  border: 1px #40a9ff solid;
+}
+
+.tsBtn:active {
+  color: #ffffff;
+  border: 1px #4e4e4e solid;
+  background-color: #002171;
+}
+
+.tsBtnActive {
+  margin: 0.5rem 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px #4e4e4e solid;
+  border-radius: 20px;
+  color: #ffffff;
+  border: 1px #4e4e4e solid;
+  background-color: #002171;
+  cursor: pointer;
+}
+
+.greyOut {
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  color: #e5e5e5;
+  margin: 0.5rem 0.75rem;
+  padding: 0.75rem 1.5rem;
+  cursor: default;
+}
+
+.timeSlotBox-greyOut {
+  border: 1px #e5e5e5 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem 2.35rem;
+}
+
+.finalBtn {
+  border: 2px #c5922c solid;
+  border-radius: 4px;
+  background-color: #c5922c;
+  color: #ffffff;
+  margin-top: 1rem;
+  padding: 0.3rem 1.5rem;
+  cursor: pointer;
+}
+
+.final-btn a {
+  color: #ffffff;
+}
+
+.final-btn-disabled {
+  border: 2px #e5e5e5 solid;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #e5e5e5;
+  margin-top: 1rem;
+  padding: 0.3rem 1.5rem;
+  cursor: default;
+}
+
+.finalBtn a {
+  color: #e5e5e5;
+}
+
+/* ===== RenderResSteps ===== */
+.step-def {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0 0 -1rem;
+  width: 38rem;
+  cursor: pointer;
+}
+
+.step-2 {
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+.step-3 {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.ant-steps-item-title::after {
+  background-color: #c4c4c4;
+}
+
+/* ===== RenderDuration ===== */
+.duration-page {
+  background: url('/images/bridgegoodesignstudio2.jpg') center 0 no-repeat;
+  background-size: 1440px 35rem;
+  height: 35rem;
+  display: flex;
+}
+
+.radio-box {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 35rem;
+  margin: 4rem auto 7rem;
+}
+
+.radio-box h1 {
+  font-size: 28px;
+  margin: 0.4rem 3rem 1rem;
+}
+
+.radio-group {
+  margin: 1rem 12rem 0;
+}
+
+.radioBtn-inactive {
+  border: 2px solid #e5e5e5;
+  background: #c4c4c4;
+  padding: 1.2rem 2rem;
+  color: #ffffff;
+  width: 10rem;
+  margin: 1rem auto 1rem;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: default;
+}
+
+.radioBtn-active {
+  border: 2px solid #e5e5e5;
+  background: #c5922c;
+  padding: 1.2rem 2rem;
+  color: #ffffff;
+  width: 10rem;
+  margin: 1rem auto 1rem;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.radioBtn-active:hover {
+  color: #1a64b7;
+  border: 1px #1a64b7 solid;
+}
+
+/* ===== RenderFinalizeRes ===== */
+.finalize-link {
+  text-decoration: underline;
+  color: blue;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.finalize-box {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 4rem 2rem;
+}
+
+.reservation-details {
+  width: 60%;
+  border-bottom: 1px solid #7e7a7a;
+}
+
+.edit-res {
+  font-size: 16px;
+  color: #1a64b7;
+  margin: 8rem 0 0;
+  cursor: pointer;
+}
+
+.donation-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.donation-details h1 {
+  color: #c5922c;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37.5px;
+}
+
+.donation-details h2 {
+  color: #252e6b;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 25.78px;
+  margin-top: 0.5rem;
+}
+
+.res-details {
+  display: flex;
+  color: #7e7a7a;
+  font-size: 16px;
+  border-top: 1px solid #7e7a7a;
+  margin-top: 4rem;
+  justify-content: space-between;
+}
+
+.res-details p {
+  width: 100%;
+}
+
+.user-res-info {
+  display: flex;
+  font-size: 16px;
+  margin: 4rem 0 4rem;
+  justify-content: space-between;
+}
+
+/* ===== DonationBox ===== */
+.donation-box {
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  width: 33%;
+  max-width: 27.5rem;
+}
+
+.header-box {
+  border: 1px solid #c4c4c4;
+  border-radius: 3px 3px 0px 0px;
+  background-color: #e5e5e5;
+}
+
+.header-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 1rem 5rem 0.125rem;
+}
+
+.donation-btns {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 2rem;
+  margin: 0 1rem;
+}
+
+.row-1 {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem auto 0.6rem;
+}
+
+.row-1-div {
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  padding: 0.75rem 3.25rem;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.active-donate-btn {
+  font-size: 14px;
+  color: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #002171;
+  padding: 0.75rem 3.25rem;
+  cursor: pointer;
+}
+
+.row-2 {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 0.5rem;
+}
+
+.row-2-div {
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
+  margin: 0 0rem;
+}
+
+.active-donation-btn-2 {
+  font-size: 14px;
+  color: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #002171;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
+}
+
+.row-2-div-OA {
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  padding: 0.75rem 5.2rem;
+  cursor: pointer;
+}
+
+.active-donation-btn-2-OA {
+  font-size: 14px;
+  color: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  background-color: #002171;
+  padding: 0.75rem 5.2rem;
+  cursor: pointer;
+}
+
+.row-3 {
+  width: 95%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+#donate-btn {
+  margin: 1rem auto 0;
+  padding: 0.75rem 0;
+  background-color: #002171;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#donate-btn h2 {
+  margin: 0 0 0 10rem;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.donation-alt {
+  width: 70%;
+  margin: 0.75rem auto 1.5rem;
+  font-weight: 700;
+  font-size: 14px;
+}
