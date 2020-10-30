@@ -195,7 +195,6 @@ export default function Page() {
       </section>
 
       <WhiteSpace />
-
     </main>
   )
 }

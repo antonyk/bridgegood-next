@@ -1,35 +1,35 @@
-import React from 'react';
-import { Steps } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
-import { UPDATE_STEP } from '../../../../state/reducers/MakeResReducer';
+import React from 'react'
+import { Steps } from 'antd'
+import { useDispatch, useSelector } from 'react-redux'
+import { UPDATE_STEP } from '../../../../state/reducers/MakeResReducer'
 
-const { Step } = Steps;
+const { Step } = Steps
 
 export default function ResSteps() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const { currentStep, duration, time_slot } = useSelector(
-    state => state.reservation
-  );
+    (state) => state.reservation
+  )
 
   const stepOne = () => {
-    dispatch({ type: UPDATE_STEP, payload: 0 });
-  };
+    dispatch({ type: UPDATE_STEP, payload: 0 })
+  }
 
   const stepTwo = () => {
     if (duration === undefined) {
-      return null;
+      return null
     } else {
-      dispatch({ type: UPDATE_STEP, payload: 1 });
+      dispatch({ type: UPDATE_STEP, payload: 1 })
     }
-  };
+  }
 
   const stepThree = () => {
     if (time_slot === 'None') {
-      return null;
+      return null
     } else {
-      dispatch({ type: UPDATE_STEP, payload: 2 });
+      dispatch({ type: UPDATE_STEP, payload: 2 })
     }
-  };
+  }
 
   return (
     <>
@@ -51,5 +51,5 @@ export default function ResSteps() {
       </div>
       <p></p>
     </>
-  );
+  )
 }

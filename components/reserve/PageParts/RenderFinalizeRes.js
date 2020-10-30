@@ -1,25 +1,25 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Anchor, Row, Col } from 'antd';
-import DonationBox from '../../../common/DonationBox';
-import { useHistory } from 'react-router-dom';
-import newAxios from '../../../../utils/axiosUtils';
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Anchor, Row, Col } from 'antd'
+import DonationBox from '../../../common/DonationBox'
+import { useHistory } from 'react-router-dom'
+import newAxios from '../../../../utils/axiosUtils'
 
-import { UPDATE_STEP } from '../../../../state/reducers/MakeResReducer';
-import '../MakeRes.less';
+import { UPDATE_STEP } from '../../../../state/reducers/MakeResReducer'
+import '../MakeRes.less'
 
 export default function RenderFinalizeRes() {
-  let history = useHistory();
-  const dispatch = useDispatch();
+  let history = useHistory()
+  const dispatch = useDispatch()
   const { date, time_slot, duration, room, roomId } = useSelector(
-    state => state.reservation
-  );
-  const user = useSelector(state => state.app.user);
-  const authToken = useSelector(state => state.app.oktaToken);
+    (state) => state.reservation
+  )
+  const user = useSelector((state) => state.app.user)
+  const authToken = useSelector((state) => state.app.oktaToken)
 
   const prevStep = () => {
-    dispatch({ type: UPDATE_STEP, payload: 1 });
-  };
+    dispatch({ type: UPDATE_STEP, payload: 1 })
+  }
 
   const months = [
     { name: 'January', num: '01' },
@@ -34,20 +34,20 @@ export default function RenderFinalizeRes() {
     { name: 'October', num: '10' },
     { name: 'November', num: '11' },
     { name: 'December', num: '12' },
-  ];
+  ]
 
   const formattedDate = () => {
-    var selectedDate = date;
-    var pulledMonth = selectedDate.substr(5, 2);
-    var pulledDay = selectedDate.substr(8, 2);
-    var pulledYear = selectedDate.substr(0, 4);
-    months.forEach(month => {
+    var selectedDate = date
+    var pulledMonth = selectedDate.substr(5, 2)
+    var pulledDay = selectedDate.substr(8, 2)
+    var pulledYear = selectedDate.substr(0, 4)
+    months.forEach((month) => {
       if (pulledMonth === month.num) {
-        pulledMonth = month.name;
+        pulledMonth = month.name
       }
-    });
-    return pulledMonth + ' ' + pulledDay + ', ' + pulledYear;
-  };
+    })
+    return pulledMonth + ' ' + pulledDay + ', ' + pulledYear
+  }
 
   const timeSlots = [
     { timeSlot: 10, duration: 2, timeWindow: '10:00AM - 12:00PM' },
@@ -68,44 +68,44 @@ export default function RenderFinalizeRes() {
     { timeSlot: 10, duration: 6, timeWindow: '10:00AM - 4:00PM' },
     { timeSlot: 11, duration: 6, timeWindow: '11:00AM - 5:00PM' },
     { timeSlot: 12, duration: 6, timeWindow: '12:00PM - 6:00PM' },
-  ];
+  ]
 
   const formattedTime = () => {
-    var time_window = '';
+    var time_window = ''
 
-    timeSlots.forEach(ts => {
+    timeSlots.forEach((ts) => {
       if (duration === ts.duration) {
         if (time_slot === ts.timeSlot) {
-          time_window = ts.timeWindow;
+          time_window = ts.timeWindow
         }
       }
-    });
-    return time_window;
-  };
+    })
+    return time_window
+  }
 
   function finalizeClick(e) {
-    e.preventDefault();
+    e.preventDefault()
 
-    let reservation;
+    let reservation
 
     // call api with data
-    const axios = newAxios(authToken);
+    const axios = newAxios(authToken)
     const resData = {
       datetime: date,
       duration: String(duration),
       room_id: roomId,
-    };
-    console.log(resData);
+    }
+    console.log(resData)
     axios
       .post('/reservation', resData)
-      .then(res => {
-        reservation = res.data.reservation;
-        history.push(`/confirmation/${reservation.id}`);
+      .then((res) => {
+        reservation = res.data.reservation
+        history.push(`/confirmation/${reservation.id}`)
       })
-      .catch(err => {
-        console.log('Failed to make a reservation on the backend');
-        console.log(err);
-      });
+      .catch((err) => {
+        console.log('Failed to make a reservation on the backend')
+        console.log(err)
+      })
   }
 
   return (
@@ -166,5 +166,5 @@ export default function RenderFinalizeRes() {
         </DonationBox>
       </div>
     </>
-  );
+  )
 }

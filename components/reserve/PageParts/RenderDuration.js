@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import 'antd/dist/antd.css';
-import { Radio } from 'antd';
-import { UPDATE_DURATION } from '../../../../state/reducers/MakeResReducer';
-import { UPDATE_STEP } from '../../../../state/reducers/MakeResReducer';
-import '../MakeRes.less';
+import React, { useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import 'antd/dist/antd.css'
+import { Radio } from 'antd'
+import { UPDATE_DURATION } from '../../../../state/reducers/MakeResReducer'
+import { UPDATE_STEP } from '../../../../state/reducers/MakeResReducer'
+import '../MakeRes.less'
 
 const radioStyle = {
   display: 'block',
@@ -13,21 +13,21 @@ const radioStyle = {
   margin: '.75rem 0',
   lineHeight: '25.78px',
   fontSize: '20px',
-};
+}
 
 export default function RenderDuration() {
-  const dispatch = useDispatch();
-  const { duration } = useSelector(state => state.reservation);
-  const [selectedDuration, setSelectedDuration] = useState(Number(duration));
+  const dispatch = useDispatch()
+  const { duration } = useSelector((state) => state.reservation)
+  const [selectedDuration, setSelectedDuration] = useState(Number(duration))
 
   const nextStep = () => {
-    dispatch({ type: UPDATE_STEP, payload: 1 });
-    dispatch({ type: UPDATE_DURATION, payload: selectedDuration });
-  };
+    dispatch({ type: UPDATE_STEP, payload: 1 })
+    dispatch({ type: UPDATE_DURATION, payload: selectedDuration })
+  }
 
-  const onDurationChange = e => {
-    setSelectedDuration(e.target.value);
-  };
+  const onDurationChange = (e) => {
+    setSelectedDuration(e.target.value)
+  }
 
   return (
     <>
@@ -84,5 +84,5 @@ export default function RenderDuration() {
         </div>
       </div>
     </>
-  );
+  )
 }

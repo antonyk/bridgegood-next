@@ -1,16 +1,16 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { UPDATE_ROOM } from '../../../../state/reducers/MakeResReducer';
-import '../MakeRes.less';
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { UPDATE_ROOM } from '../../../../state/reducers/MakeResReducer'
+import '../MakeRes.less'
 
 export default function RenderRoomPick() {
-  const dispatch = useDispatch();
-  const { date, room } = useSelector(state => state.reservation);
+  const dispatch = useDispatch()
+  const { date, room } = useSelector((state) => state.reservation)
 
   const roomTypes = [
     { type: 'Co-working Room', id: 'da3024b3-ad0d-4bda-b45b-7fcf129ab08a' },
     { type: 'Media Room', id: 'eccfbc02-b0a8-4cb1-ae42-ee1e91e420fe' },
-  ];
+  ]
 
   return (
     <>
@@ -49,9 +49,9 @@ export default function RenderRoomPick() {
             >
               {roomType.type}
             </div>
-          );
+          )
         })}
       </div>
     </>
-  );
+  )
 }
